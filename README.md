@@ -11,7 +11,7 @@ This is the TensorFlow implementation for UW-Net. The code was written by [Honey
 This project contains the scripts to train and test UW-Net network. Below figure shows few generated images for the underwater dataset released by [Berman et al.](https://www.eng.tau.ac.il/~berman/UnderwaterColorRestoration/) 
 which we had used for qualitative analysis in our paper. 
  
-<img src='imgs/bermal_results.png' width="900px"/>
+<img src='imgs/result_cropped.png' width="900px"/>
 
 ## Getting Started
 

@@ -1,0 +1,6 @@
+{
+  "description": "Testing with trained model.",
+  "network_version": "tensorflow",
+  "dataset_name": "hazelines",
+  "do_flipping": 0
+}

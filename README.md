@@ -1,8 +1,8 @@
-# Unsupervised Single Image Underwater Depth Estimation (UW-Net)
+# Unsupervised Single Image Underwater Depth Estimation (UW-Net) [[Project]](http://www.ee.iitm.ac.in/comp_photolab/project-underwater.html) [[Paper]](https://arxiv.org/pdf/1905.10595.pdf) 
+
 
 <img src='imgs/arch_1.png' width="900px"/>
 
-[[Project]](http://www.ee.iitm.ac.in/comp_photolab/project-underwater.html) [[Paper]](https://arxiv.org/pdf/1905.10595.pdf) 
 
 This is the TensorFlow implementation for UW-Net. The code was written by [Honey Gupta](https://github.com/honeygupta), but parts of it was borrowed from the [CycleGAN code](https://github.com/leehomyc/cyclegan-1) written by Harry Yang and Nathan Silberman.
 

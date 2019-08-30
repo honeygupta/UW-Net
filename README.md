@@ -1,8 +1,7 @@
 # Unsupervised Single Image Underwater Depth Estimation (UW-Net) [[Project]](http://www.ee.iitm.ac.in/comp_photolab/project-underwater.html) [[Paper]](https://arxiv.org/pdf/1905.10595.pdf) 
 
-This project contains the tensorflow implementation for UW-Net and includes the scripts to train and test the network. 
-The code is written and maintained by [Honey Gupta](https://github.com/honeygupta), but parts of it was borrowed from the [CycleGAN code](https://github.com/leehomyc/cyclegan-1) written by Harry Yang and Nathan Silberman.
-
+This repository contains the tensorflow implementation for UW-Net and includes the scripts to train and test the network. 
+The code is written and maintained by [Honey Gupta](https://github.com/honeygupta).
 ## Getting Started
 
 ### Package requirements
@@ -90,17 +89,25 @@ In the provided checkpoints, the folder ```checkpoints/pre-trained/``` contains 
 
 To test on the pre-trained models, change the entry for --checkpoint_dir in the above command line script.   
 
-### Citation
+## Citation
+Kindly cite our paper if this repository is useful for your research.
 
-If you use this code, kindly cite our paper:
+### Bibtex:
 
-@article{gupta2019unsupervised,  <br />
-  &nbsp; &nbsp; title={Unsupervised Single Image Underwater Depth Estimation}, <br />
-  &nbsp; &nbsp; author={Gupta, Honey and Mitra, Kaushik}, <br />
-  &nbsp; &nbsp; journal={arXiv preprint arXiv:1905.10595}, <br />
-  &nbsp; &nbsp; year={2019}
+```
+@article{gupta2019unsupervised, 
+  title={Unsupervised Single Image Underwater Depth Estimation}, 
+  author={Gupta, Honey and Mitra, Kaushik}, 
+  journal={arXiv preprint arXiv:1905.10595}, 
+  year={2019}
 }
+```
 
+## License
 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+This repository is partially built upon the [CycleGAN](https://github.com/leehomyc/cyclegan-1) repository written by Harry Yang and Nathan Silberman.
 
 

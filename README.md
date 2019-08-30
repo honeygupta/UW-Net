@@ -1,4 +1,5 @@
-# Unsupervised Single Image Underwater Depth Estimation (UW-Net) [[Project]](http://www.ee.iitm.ac.in/comp_photolab/project-underwater.html) [[Paper]](https://arxiv.org/pdf/1905.10595.pdf) 
+## Unsupervised Single Image Underwater Depth Estimation (UW-Net) 
+[[Project]](http://www.ee.iitm.ac.in/comp_photolab/project-underwater.html) [[Paper]](https://arxiv.org/pdf/1905.10595.pdf) 
 
 This repository contains the tensorflow implementation for UW-Net and includes the scripts to train and test the network. 
 The code is written and maintained by [Honey Gupta](https://github.com/honeygupta).

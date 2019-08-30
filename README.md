@@ -3,15 +3,8 @@
 
 <img src='imgs/arch_1.png' width="900px"/>
 
-
-This is the TensorFlow implementation for UW-Net. The code was written by [Honey Gupta](https://github.com/honeygupta), but parts of it was borrowed from the [CycleGAN code](https://github.com/leehomyc/cyclegan-1) written by Harry Yang and Nathan Silberman.
-
-## Introduction
-
-This project contains the scripts to train and test UW-Net network. Below figure shows few generated images for the underwater dataset released by [Berman et al.](https://www.eng.tau.ac.il/~berman/UnderwaterColorRestoration/) 
-which we had used for qualitative analysis in our paper. 
- 
-<img src='imgs/result_cropped.png' width="900px"/>
+This project contains the tensorflow implementation for UW-Net and includes the scripts to train and test the network. 
+The code is written and maintained by [Honey Gupta](https://github.com/honeygupta), but parts of it was borrowed from the [CycleGAN code](https://github.com/leehomyc/cyclegan-1) written by Harry Yang and Nathan Silberman.
 
 ## Getting Started
 
@@ -92,10 +85,13 @@ python main.py \
     ```
 The result is saved in out/exp_01_test/#timestamp#. 
 
-In the provided code, the folder ```out/checkpoint/``` contains the model trained on our collected underwater dataset and 
-```out/finetune``` contains the model from ```out/checkpoint/``` fine-tuned on Berman et al.'s dataset for 20 epochs.
+#### Using the pre-trained model
+Download the pre-trained models from [here](https://drive.google.com/file/d/1zkOwdPFP3NVdBhfa-7bdIkOa5HxzNyqT/view?usp=sharing) and extract the files in the working folder.
 
-To test on the pre-trained models, just change the entry for --checkpoint_dir in the above line script.   
+In the provided checkpoints, the folder ```checkpoints/pre-trained/``` contains the model trained on our collected underwater dataset and 
+```checkpoints/finetune``` contains the model from ```checkpoints/pre-trained/``` fine-tuned on Berman et al.'s dataset for 20 epochs.
+
+To test on the pre-trained models, change the entry for --checkpoint_dir in the above command line script.   
 
 
 

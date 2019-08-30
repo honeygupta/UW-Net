@@ -483,7 +483,7 @@ class UWNet:
               help='The name of the configuration file.')
 @click.option('--checkpoint_dir',
               type=click.STRING,
-              default='out/finetune',
+              default='checkpoints/finetune',
               help='The name of the train/test split.')
 
 def main(to_train, log_dir, config_filename, checkpoint_dir):

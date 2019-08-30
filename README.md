@@ -53,7 +53,7 @@ The code is written and maintained by [Honey Gupta](https://github.com/honeygupt
 	```
 	* Check the html visualization at  ```out/exp_01/#timestamp#/epoch_#id#.html```  
 
-### Restoring from the previous checkpoint.
+### Restoring from the previous checkpoint
 ```bash
 python main.py \
     --to_train=2 \

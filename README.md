@@ -90,6 +90,16 @@ In the provided checkpoints, the folder ```checkpoints/pre-trained/``` contains 
 
 To test on the pre-trained models, change the entry for --checkpoint_dir in the above command line script.   
 
+### Citation
+
+If you use this code, kindly cite our paper:
+
+@article{gupta2019unsupervised,  <br />
+  &nbsp; &nbsp; title={Unsupervised Single Image Underwater Depth Estimation}, <br />
+  &nbsp; &nbsp; author={Gupta, Honey and Mitra, Kaushik}, <br />
+  &nbsp; &nbsp; journal={arXiv preprint arXiv:1905.10595}, <br />
+  &nbsp; &nbsp; year={2019}
+}
 
 
 

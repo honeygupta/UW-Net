@@ -61,18 +61,37 @@ python main.py \
     --config_filename=configs/exp_01.json \
     --checkpoint_dir=out/exp_01/#timestamp#
 ```
-### Testing
+### Testing 
+
+You can test the models in two ways: (1) using the test.py file that does not require the RGBD dataset (2) Using the main.py file.
+I recommend using the test.py as it does not require the RGBD dataset.
+
 * Create the testing dataset
 	* Edit the uwnet_datasets.py file the same way as training
 	    * A sample entry for the dataset by Berman et al. can be found in the script
 	* Create the csv file as the input to the data loader. 
+    To create the csv file containing only the underwater image list:
     ```bash
-    python create_uwnet_dataset --image_path_a=/path/to/folder/with/rgbd/npy/files \
+    python create_uwnet_dataset.py \
+         --image_path_b=/path/to/folder/containing/underwater/images --dataset_name="hazelines" --mode="test"
+    ```
+    To create a csv file containg both UW and RGBD file names:
+    ```bash
+    python create_uwnet_dataset.py --image_path_a=/path/to/folder/with/rgbd/npy/files \
          --image_path_b=/path/to/folder/containing/underwater/images --dataset_name="hazelines"
     ```
-    TODO: Remove the requirement of RGBD dataset while testing.
+    
      
 * Run testing
+    ```bash
+    python test.py \
+        --log_dir=out/exp_01_test \
+        --config_filename=configs/exp_01_test.json \
+        --checkpoint_dir=out/exp_01/#timestamp# 
+    ```
+    
+    OR
+
     ```bash
     python main.py \
         --to_train=0 \

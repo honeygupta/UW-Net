@@ -47,29 +47,45 @@ def create_list(foldername, fulldir=True, suffix=".jpg"):
               type=click.BOOL,
               default=False,
               help='Whether to shuffle images when creating the dataset.')
+@click.option('--mode',
+              type=click.STRING,
+              default='test',
+              help='Choose one among ["train","test"].')
+
 def create_dataset(image_path_a, image_path_b,
-                   dataset_name, do_shuffle):
-    list_a = create_list(image_path_a, True,
+                   dataset_name, do_shuffle, mode):
+    if mode == 'train':
+        list_a = create_list(image_path_a, True,
                          uwnet_datasets.DATASET_TO_IMAGETYPE[dataset_name])
+
     list_b = create_list(image_path_b, True,
-                         uwnet_datasets.DATASET_TO_IMAGETYPE[dataset_name])
+                        uwnet_datasets.DATASET_TO_IMAGETYPE[dataset_name])
 
     output_path = uwnet_datasets.PATH_TO_CSV[dataset_name]
 
     num_rows = uwnet_datasets.DATASET_TO_SIZES[dataset_name]
     all_data_tuples = []
-    for i in range(num_rows):
-        all_data_tuples.append((
+    
+    if mode == 'train':
+        for i in range(num_rows):
+            all_data_tuples.append((
             list_a[i % len(list_a)],
             list_b[i % len(list_b)]
-        ))
+            ))
+    elif mode == 'test':
+        all_data_tuples = list_b
+
     if do_shuffle is True:
         random.shuffle(all_data_tuples)
+    
     with open(output_path, 'w') as csv_file:
         csv_writer = csv.writer(csv_file)
-        for data_tuple in enumerate(all_data_tuples):
-            csv_writer.writerow(list(data_tuple[1]))
-
+        if mode == 'train':
+            for data_tuple in enumerate(all_data_tuples):
+                csv_writer.writerow(list(data_tuple[1]))
+        elif mode == 'test':
+            for data_tuple in all_data_tuples:
+                csv_writer.writerow((data_tuple,))
 
 if __name__ == '__main__':
     create_dataset()
